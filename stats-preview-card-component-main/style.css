@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+--verydark-blue: hsl(233, 47%, 7%);
+--darkseturated-blue: hsl(244, 38%, 16%);
+--soft-violet: hsl(277, 64%, 61%);
+
+--white-main: hsl(0, 0%, 100%);
+--mainparagraph-white: hsla(0, 0%, 100%, 0.75);
+--statheading-white: hsla(0, 0%, 100%, 0.6);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--verydark-blue);
+    color: var(--white-main);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    height: 80vh;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.image-box {
+    width: 100%;
+    height: 30%;
+    position: relative;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--soft-violet);
+}
+
+.image {
+    background-image: url("/images/image-header-mobile.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    mix-blend-mode: multiply;
+    opacity: 75%;
+    object-fit:cover;
+    
+}
+
+.text-box {
+    height: 70%;
+    background-color: var(--darkseturated-blue);
+    padding: 10% 8%;
+    text-align: center;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.text-box h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.text-box p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: var(--mainparagraph-white);
+    margin-top: 1.1rem;
+    line-height: 1.6rem;
+}
+
+.text-box h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-top: 10%;
+    text-transform: uppercase;
+    
+}
+
+
+.text-box h3 {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--statheading-white);
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+}
+
+.text-box span {
+    color: var(--soft-violet);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media screen and (min-width: 767px) {
+
+    .container {
+        display: flex;
+        height: 40vh;
+        width: clamp(50%, 1000px, 90%);
+        flex-direction: row-reverse;
+        margin: auto;
+        transform: translateY(50%);
+        position: relative; 
+        top: 50%;
+       border-bottom-right-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+
+    .image-box {
+        min-width: 48%;
+        height: 100%;
+        position: relative;
+        
+    }
+
+    .text-box {
+        text-align: left;
+        padding: 5.5% 9% 5% 6.2%;
+        height: 100%;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0.5rem;
+    }
+
+   .stats-container {
+    display: flex;
+    gap: 4.4rem;
+    margin-top: 15%;
+   }
+}
